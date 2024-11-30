@@ -8,7 +8,8 @@ H2データベースを使用し、ログイン画面に新規登録機能を追
 
 また、Webアプリケーション開発時における設計を意識しながら構築。
 
-- ログインに関する機能
+- ログイン認証機能
+- アカウント新規登録
 - つぶやきに関する機能
 
 
@@ -38,34 +39,39 @@ H2データベースを使用し、ログイン画面に新規登録機能を追
 
 ---
 
-## 処理の流れ図
-
-
 ## directory図
+
+ログイン、新規登録機能までのツリー
 ```
 .
-└── Neko_channel/
+└── Neko_channel_DB/
     ├── java/
     │   ├── servlet/
-    │   │   ├── Login.java
-    │   │   ├── Logout.java
-    │   │   └── Main.java
-    │   ├── model /
+    │   │   ├── LoginServlet.java
+    │   │   ├── AccountRegister.java
+    │   │   └── AccountRegisterComplete.java
+    │   ├── model/
+    │   │   ├── AccountBeans.java
     │   │   ├── LoginLogic.java
-    │   │   ├── PostMutterLogic.java
-    │   │   ├── GetMutterListLogic.java
-    │   │   ├── User.java(javaBeans)
-    │   │   └── Mutter.java(javaBeans)
-    │   └── dao/
-    │       └── MuttersDAO.java
+    │   │   └── RegisterLogic.java
+    │   ├── filter/
+    │   │   └── SetEncodingFilter.java
+    │   ├── dao/
+    │   │   ├── AccountsDAO.java
+    │   │   └── AccountRegisterDAO.java
+    │   └── test/
+    │       ├── AccountsDAOTest.java
+    │       └── LoginLogicTest.java
     └── webapp/
-        ├── css
-        ├── images
+        ├── css/
+        ├── images/
         ├── WEB-INF/
-        │   └── jsp /
-        │       ├── loginResult.jsp
-        │       ├── logout.jsp
-        │       └── main.jsp
+        │   └── jsp/
+        │       ├── login.jsp
+        │       ├── loginSuccess.jsp
+        │       ├── register.jsp
+        │       ├── registerCheck.jsp
+        │       └── registerSuccess.jsp
         └── index.jsp
 ```
 ---
