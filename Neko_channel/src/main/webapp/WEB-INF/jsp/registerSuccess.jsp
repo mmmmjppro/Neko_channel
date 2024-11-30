@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Neko channel</title>
 </head>
 <body>
 
+<h1>Nekoちゃんねる</h1>
+<h2>アカウント登録完了</h2>
 </body>
 </html>

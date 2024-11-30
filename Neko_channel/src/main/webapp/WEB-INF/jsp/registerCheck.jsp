@@ -10,7 +10,9 @@
 <title>Neko channel</title>
 </head>
 <body>
-<h1>入力内容確認</h1>
+
+<h1>Nekoちゃんねる</h1>
+<h2>入力内容確認</h2>
 
     <!-- エラーメッセージの表示 -->
     <c:if test="${not empty errorMsg}">
