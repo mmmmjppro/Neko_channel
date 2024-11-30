@@ -21,8 +21,7 @@ public class AccountBeans implements Serializable {
         this.password = password;
     }
     
-    public AccountBeans(int accountNumber, String userId, String password, String name, String gender, String bloodType) {
-        this.accountNumber = accountNumber;
+    public AccountBeans(String userId, String password, String name, String gender, String bloodType) {
         this.userId = userId;
         this.password = password;
         this.name = name;

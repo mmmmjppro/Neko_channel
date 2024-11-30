@@ -15,7 +15,7 @@
 </c:if>
 <form action="LoginServlet" method="post">
     <label for="userId">猫ID</label>
-    <input type="text" name="userId" placeholder="Your name">
+    <input type="text" name="userId" placeholder="Userid...">
     <br>
     
     <label for="password">パスワード</label>
