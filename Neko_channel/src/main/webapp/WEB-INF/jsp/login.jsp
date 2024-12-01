@@ -6,9 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Neko Channel</title>
+<title>Nekoちゃんねる[ログイン]</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+
+<!-- Headerのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
+
+<h2>ログイン</h2>
 
 <c:if test="${not empty errorMsg}">
     <p style="color: red;">${errorMsg}</p>
@@ -24,6 +31,9 @@
     
     <input type="submit" value="ログイン"> 
 </form>
+
+<!-- フッターのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
 
 </body>
 </html>

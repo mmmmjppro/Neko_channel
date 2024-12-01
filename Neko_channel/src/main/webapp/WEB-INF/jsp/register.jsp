@@ -6,11 +6,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Neko channel</title>
+<title>Nekoちゃんねる[新規登録]</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 
-<h1>Nekoちゃんねる</h1>
+<!-- Headerのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
 
 <h2>新規登録画面</h2>
 
@@ -53,6 +56,9 @@
 </form>
 
 　　<a href="index.jsp">TOPへ</a>
+
+<!-- フッターのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
 
 </body>
 </html>

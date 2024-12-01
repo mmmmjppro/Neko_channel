@@ -4,11 +4,8 @@ import dao.AccountsDAO;
 
 public class LoginLogic {
 
-	public boolean execute(AccountBeans loginAccount) {
-		AccountsDAO dao = new AccountsDAO();
-		AccountBeans account = dao.findAccount(loginAccount);
-		
-		return account != null;
-		
+	 public AccountBeans execute(AccountBeans loginAccount) {
+	        AccountsDAO dao = new AccountsDAO();
+	        return dao.findAccount(loginAccount); // アカウント情報を返す
 	}
 }

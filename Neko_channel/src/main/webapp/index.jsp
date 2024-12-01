@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Neko Channel</title>
+    <meta charset="UTF-8">
+    <title>Nekoちゃんねる[TOP]</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+
+<!-- Headerのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
 
 <h2>🐾Nekoちゃんねるへようこそ🐾</h2>
 
@@ -25,6 +31,9 @@
 
 <a href="LoginServlet">ログイン画面へ</a>
 <a href="AccountRegister">新規登録</a>
+
+<!-- フッターのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
 
 </body>
 </html>

@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Nekoちゃんねる[ログイン完了]</title>
+<title>Nekoちゃんねる[掲示板]</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
@@ -14,13 +15,26 @@
 <!-- Headerのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
 
-<h2>🐾<c:out value="${sessionScope.loginUser.userId}" />猫さん、おかえりなさい🐾</h2>
+<h2>猫のたまり場</h2>
 
-<p>何かつぶやきますか～？&#x1f408;</p>
+<a href="Main">更新</a>
+<a href="Logout">退出する</a>
 
-<a href="Main" >猫のたまり場にGO</a>
+<form action="Main" method="post">
+    <input type="text" name="text" placeholder="にゃにゃにゃ...">
+    <input type="submit" value="にゃ～">
+</form>
+
+<c:if test="${not empty errorMsg}">
+    <p style="color: red;"><c:out value="${errorMsg}" /></p>
+</c:if>
+
+<c:forEach var="mutter" items="${mutterList}">
+    <p><c:out value="${mutter.userId}" />: <c:out value="${mutter.text}" /></p>
+</c:forEach>
 
 <!-- フッターのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
+
 </body>
 </html>

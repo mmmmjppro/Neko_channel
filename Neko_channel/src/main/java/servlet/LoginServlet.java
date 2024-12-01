@@ -46,15 +46,15 @@ public class LoginServlet extends HttpServlet {
 		
 		//ログイン処理の実行
 		AccountBeans account = new AccountBeans(userId,password);
-		LoginLogic bo = new LoginLogic();
-		boolean result = bo.execute(account);
+		LoginLogic loginUser = new LoginLogic();
+		AccountBeans resultAccount = loginUser.execute(account);
 	
 		String errorMsg = "";
 				
-		if (result) {
-			//セッションスコープにユーザIDを保存
+		if (resultAccount != null) {
+			//セッションスコープにアカウントを保存
 			HttpSession session = request.getSession();
-			session.setAttribute("userId", userId);
+			session.setAttribute("loginUser", resultAccount);
 			
 			//loginSuccess.jspにフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/loginSuccess.jsp");

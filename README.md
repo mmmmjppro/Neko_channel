@@ -44,35 +44,37 @@ H2データベースを使用し、ログイン画面に新規登録機能を追
 ログイン、新規登録機能までのツリー
 ```
 .
+.
 └── Neko_channel_DB/
     ├── java/
-    │   ├── servlet/
-    │   │   ├── LoginServlet.java
-    │   │   ├── AccountRegister.java
-    │   │   └── AccountRegisterComplete.java
-    │   ├── model/
-    │   │   ├── AccountBeans.java
-    │   │   ├── LoginLogic.java
-    │   │   └── RegisterLogic.java
-    │   ├── filter/
-    │   │   └── SetEncodingFilter.java
-    │   ├── dao/
-    │   │   ├── AccountsDAO.java
-    │   │   └── AccountRegisterDAO.java
-    │   └── test/
-    │       ├── AccountsDAOTest.java
-    │       └── LoginLogicTest.java
-    └── webapp/
-        ├── css/
-        ├── images/
-        ├── WEB-INF/
-        │   └── jsp/
-        │       ├── login.jsp
-        │       ├── loginSuccess.jsp
-        │       ├── register.jsp
-        │       ├── registerCheck.jsp
-        │       └── registerSuccess.jsp
-        └── index.jsp
+    │   └── servlet/
+    │       ├── LoginServlet.java
+    │       ├── AccountRegister.java
+    │       └── AccountRegisterComplete.java
+    └── Logout.java/
+        ├── model/
+        │   ├── AccountBeans.java
+        │   ├── LoginLogic.java
+        │   └── RegisterLogic.java
+        ├── filter/
+        │   └── SetEncodingFilter.java
+        ├── dao/
+        │   ├── AccountsDAO.java
+        │   └── AccountRegisterDAO.java
+        ├── test/
+        │   ├── AccountsDAOTest.java
+        │   └── LoginLogicTest.java
+        └── webapp/
+            ├── css/
+            ├── images/
+            ├── WEB-INF/
+            │   └── jsp/
+            │       ├── login.jsp
+            │       ├── loginSuccess.jsp
+            │       ├── register.jsp
+            │       ├── registerCheck.jsp
+            │       └── registerSuccess.jsp
+            └── index.jsp
 ```
 ---
 

@@ -7,11 +7,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Neko channel</title>
+<title>Nekoちゃんねる[登録情報確認]</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 
-<h1>Nekoちゃんねる</h1>
+<!-- Headerのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
+
 <h2>入力内容確認</h2>
 
     <!-- エラーメッセージの表示 -->
@@ -36,7 +40,9 @@
     <form action="AccountRegister" method="get">
         <input type="submit" value="登録画面へ戻る">
     </form>
-</body>
-</html>
+    
+<!-- フッターのインクルード -->
+<jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
+
 </body>
 </html>
