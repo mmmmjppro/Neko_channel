@@ -76,6 +76,53 @@ H2データベースを使用し、ログイン画面に新規登録機能を追
             │       └── registerSuccess.jsp
             └── index.jsp
 ```
+
+つぶやき機能を追加後
+```
+.
+└── Neko_channel_DB/
+    ├── java/
+    │   └── servlet/
+    │       ├── LoginServlet.java
+    │       ├── AccountRegister.java
+    │       ├── AccountRegisterComplete.java
+    │       ├── Main.java
+    │       └── Logout.java
+    └── Logout.java/
+        ├── model/
+        │   ├── AccountBeans.java
+        │   ├── LoginLogic.java
+        │   ├── RegisterLogic.java
+        │   ├── Mutterbeans.java
+        │   ├── GetMutterListLogic.java
+        │   └── PostMutterLogic.java
+        ├── filter/
+        │   ├── LoginCheckFilter.java
+        │   └── SetEncodingFilter.java
+        ├── dao/
+        │   ├── AccountsDAO.java
+        │   ├── AccountRegisterDAO.java
+        │   └── MuttersDAO.java
+        ├── test/
+        │   ├── AccountsDAOTest.java
+        │   └── LoginLogicTest.java
+        └── webapp/
+            ├── css/
+            ├── images/
+            ├── WEB-INF/
+            │   └── jsp/
+            │       ├── includes/
+            │       │   ├── footer.jsp
+            │       │   └── heaer.jsp
+            │       ├── login.jsp
+            │       ├── loginSuccess.jsp
+            │       ├── main.jsp
+            │       ├── register.jsp
+            │       ├── registerCheck.jsp
+            │       └── registerSuccess.jsp
+            └── index.jsp
+ ```
+
 ---
 
 ## その他

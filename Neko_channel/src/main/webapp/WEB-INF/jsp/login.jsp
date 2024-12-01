@@ -15,6 +15,7 @@
 <!-- Headerのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
 
+<main>
 <h2>ログイン</h2>
 
 <c:if test="${not empty errorMsg}">
@@ -31,6 +32,7 @@
     
     <input type="submit" value="ログイン"> 
 </form>
+</main>
 
 <!-- フッターのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />

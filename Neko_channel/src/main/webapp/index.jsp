@@ -15,6 +15,7 @@
 <!-- Headerのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/header.jsp" />
 
+<main>
 <h2>🐾Nekoちゃんねるへようこそ🐾</h2>
 
 <p>
@@ -31,7 +32,7 @@
 
 <a href="LoginServlet">ログイン画面へ</a>
 <a href="AccountRegister">新規登録</a>
-
+</main>
 <!-- フッターのインクルード -->
 <jsp:include page="/WEB-INF/jsp/includes/footer.jsp" />
 
