@@ -45,6 +45,15 @@
         <div class="tweet-wrapper">
             <p class="user-id"><c:out value="${mutter.userId}" /></p>
             <p class="tweet-text"><c:out value="${mutter.text}" /></p>
+            <div class="tweet-actions">
+                <!-- いいねの数を表示 -->
+                <span><img class="likes" src="${pageContext.request.contextPath}/images/like.png" alt="LIKE"> <c:out value="${mutter.likeCount}" /></span>
+                <!-- いいねボタン -->
+                <form action="LikeServlet" method="post" class="like-form">
+                    <input type="hidden" name="mutterId" value="${mutter.mutterId}" />
+                    <button type="submit" class="like-button">いいね</button>
+                </form>
+            </div>
             <div class="tweet-divider"></div>
         </div>
     </c:forEach>
