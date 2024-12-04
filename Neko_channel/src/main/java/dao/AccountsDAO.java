@@ -11,7 +11,7 @@ import model.AccountBeans;
 public class AccountsDAO {
 	
 	//データベースに接続する情報
-	private final String JDBC_URL = "jdbc:h2:tcp://localhost/~/OneDrive/Documents/SQL/Neko_DB";
+	private final String JDBC_URL = "jdbc:h2:tcp://localhost/~/desktop/Database/Neko";
 	private final String DB_USER = "sa";
 	private final String DB_PASS = "";
 	

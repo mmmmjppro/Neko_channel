@@ -13,7 +13,7 @@ import model.MutterBeans;
 public class MuttersDAO {
 	
 	//データベース接続に必要な情報
-	String JDBC_URL = "jdbc:h2:tcp://localhost/~/OneDrive/Documents/SQL/Neko_DB";
+	String JDBC_URL = "jdbc:h2:tcp://localhost/~/desktop/Database/Neko";
 	String DB_USER = "sa";
 	String DB_PASS = "";
 	
